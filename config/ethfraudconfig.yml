@@ -1,0 +1,16 @@
+fileconfig:
+  dataFile: './test_data/eth_trxn_dataset.csv'
+  pickleout: './output/trainingethfraud.p'
+
+dataconfig:
+  header: 0
+  featOffset: 1
+  dataname: 'ETHFRAUD'
+  trainperc: 0.8
+  islarge: True
+  has_idn: False
+  categoryfeatures: [0, 1]
+  featureLabels: []
+  numclasses: 2
+  classarray: [0,1]
+  ismulticlass: False

@@ -1,0 +1,26 @@
+# Simulation parameters
+simparams:
+  seed: 0
+  n: 100 # Number of nodes
+  attackperc: 0.3 # Percent attacking, doubles with sybil
+  T: 2000 # Number of rounds
+  netattacktype: 'DATA' # DATA (no sybil) or SYBIL attack
+  nodeattacktype: 'ONOFF' # Attack types: CONTROL (no attack) or MIXED (a.k.a. ONOFF)
+  lambdaval: 10  # 1 < lambdaval < Max N * (N-1), block size
+  phi: 0.1
+  numsum: 30
+
+nodeparams:
+  malcperc: 1.0 # percent chance to attack
+  honestbetas:
+    good: [2, 1]
+    general: [1, 1]
+    bad: [1, 2]
+  malcbetas:
+    good: [2, 1]
+    general: [1, 1]
+    bad: [1, 2] # Adversary changes behavior to attack below
+    badattack: [6,1]
+
+
+

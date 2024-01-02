@@ -1,0 +1,34 @@
+# Simulation parameters
+simparams:
+  seed: 0
+  n: 10 # Number of nodes
+  attack: 0.3 # Percent attacking
+  time: 1000 # Number of rounds
+  attacktype: DATA # DATA (no sybil) or SYBIL
+  blockreplogging: True
+
+nodeparams:
+  advAttack: 'CONTROL' # Attack types: CONTROL (no attack), UNIFORM, MAD, UNIFORMMIXED, MADMIXED
+  dataVar: 1
+  numrepstore: 40
+  B: 10 # Number of nodes to ping for grads
+  K: 20 # Number of rounds before updating local gradients with neighbor vectors
+  train_file: 'ETHFRAUD'
+  agentSolver: 'DQN' # Options: 'CONTROL', 'CQI', 'DQN', 'DDQN', 'CQL', 'MULTIKRUM', 'BRIDGE'
+  foolswait: 2
+  consensus_scheme: 'LQN' # Options: 'EPSGREEDY', 'MVEDQL', 'DBTS'
+  consensus_attack: 'CONTROL' # CONTROL or GREEDY
+  gradnoisedev: 0.001
+  krumselect: 3
+  bridgeselect: 3
+  minibatchdiv: 4
+  innerParams:
+    trainperc: 0.8
+    layer_nodes: [50,20]
+    sgdlearn: 0.7
+    unifattmag: 0.01
+    step_size: 0.01
+    beta_val: 0.01
+
+
+
